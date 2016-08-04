@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 38.90185450592493, lng: -77.02142311725765},
+            zoom: 18,
+            mapTypeId: 'hybrid'
+        });
+        var marker = new google.maps.Marker({
+            position: {lat: 38.90185450592493, lng: -77.02142311725765},
+            map: map,
+            title: 'Hello World!'
+          });
+        var marker = new google.maps.Marker({
+            position: {lat: 38.902102, lng: -77.020928},
+            map: map,
+            title: 'Hello World!'
+          });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtT6Ch-I6jTWt36fhgFugJIrtsKWPVD3Q&callback=initMap">
+    </script>
+    <table align="center">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+</table>
+  </body>
+</html>
+
